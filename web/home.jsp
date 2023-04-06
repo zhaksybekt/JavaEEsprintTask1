@@ -62,7 +62,7 @@
     <td><%=task.getStatus()%></td>
     <td><%= task.getDeadlineDate() %></td>
     <td>
-      <a href="DeleteTaskServlet?id=<%= task.getId() %>">Delete</a>
+      <a href="DeleteTaskServlet?id=<%= task.getId() %>" style="text-decoration: none" >Delete </a>
     </td>
     <td>
       <a href="/details?id=<%=task.getId()%>" class="btn btn-info btn-sm" >DETAILS</a>

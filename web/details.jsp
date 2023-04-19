@@ -49,11 +49,7 @@
                     <input type="text" class="form-control" readonly value="<%=task.getStatus()%>" >
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12">
-                    <label>PRICE : </label>
-                </div>
-            </div>
+          
 
             <div class="row mt-3">
                 <div class="col-12">

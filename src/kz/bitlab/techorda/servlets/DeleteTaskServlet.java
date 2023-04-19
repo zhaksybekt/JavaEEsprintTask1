@@ -1,14 +1,21 @@
 package kz.bitlab.techorda.servlets;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import kz.bitlab.techorda.modules.DBManager;
+
+
 import java.io.IOException;
-@WebServlet(value = "/DeleteTaskServlet")
-public class DeleteTaskServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long id = Long.parseLong(request.getParameter("id"));
-        DBManager.deleteTask(id);
-        response.sendRedirect("home.jsp");
+@WebServlet(value = "/delete-book")
+public class DeleteTaskServlet extends HttpServlet{
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        DBManager.deleteTasks(id);
+        response.sendRedirect("/");
     }
 }
